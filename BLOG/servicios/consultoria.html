@@ -1,0 +1,107 @@
+<html lang="es" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="assets/css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="assets/css/style.css"> <!-- Gem style -->
+	<link href="assets/css/my.css" rel="stylesheet">
+	<script src="assets/js/modernizr.js"></script> <!-- Modernizr -->
+	<title>EPS SEDAM HUANCAYO S.A.</title>
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="img/favicon.ico" />
+	<!-- Apple devices Homescreen icon -->
+	<link rel="apple-touch-icon-precomposed" href="img/apple-touch-icon-precomposed.png" />
+	<style type="text/css">
+	button:disabled,button[disabled], input[type="submit"]:disabled {
+    background: #809191;
+    cursor:not-allowed !important;
+  	}
+ul {
+  display: block;
+  list-style-type: disc;
+  margin-top: 1em;
+  margin-bottom: 1 em;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 40px;
+}
+	</style>
+</head>
+<body>
+	<header role="banner">
+		<div id="cd-logo">
+			<!--<a href="#0"><img src="img/logoempresa.png" alt="Logo"></a>-->
+			Oficina Virtual
+			<h1>EPS SEDAM HUANCAYO S.A.</h1>
+		</div>
+
+		<nav class="main-nav">
+			<ul>
+				<!-- inser more links here -->
+				<!--<li><a class="cd-signin" href="reclamoNew.php">Reclamos</a></li>-->
+				<!--<li><a class="cd-signin" href="simulador.php">Cálculo de consumo</a></li>-->
+				<!--
+				<li><a class="cd-signin" href="index.php?t=ref">Fraccionamiento</a></li>
+				<li><a class="cd-signin" href="login.php">INGRESAR</a></li>
+				<li><a class="cd-signin" href="signup.php">CREAR CUENTA</a></li>-->
+				<li><a class="cd-signup" href="https://www.sedamhuancayo.com.pe/">Portal Web</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<section>
+			<div   class="cd-user-modal-container2"> <!-- log in form -->
+			<!--<center><img src="img/logotipo.png" class="img-responsive" alt="EPS SEDAM HUANCAYO S.A."></center>-->
+				<h1 class="title">Oficina Virtual</h1>
+		        				<form class="cd-form" method="post" id="login-form">
+					<p class="fieldset">
+						<label class="image-replace cd-password" for="signin-email">Codigo Inscripcion</label>
+						<input class="full-width has-padding has-border" id="signin-email" type="number" placeholder="Codigo Inscripcion" name="codigo">
+						<span class="cd-error-message">Error message here!</span>
+					</p>
+					<p class="fieldset">
+						<div class="g-recaptcha" data-sitekey="6LfU5esUAAAAADPKqyKoB-3nA6TVFIUY-IcTGKUy" data-callback="onReCaptcha"></div>
+					</p>
+					
+					<p class="fieldset">
+					<input class="full-width" type="submit" name="btn-login" value="Consultar Deuda" id="bt-submit" disabled>
+					<!--<input class="full-width" type="submit" name="btn-login" value="Consultar" id="bt-submit">-->
+					</p>
+				</form>
+
+				<div class="alert alert-green">
+				    <h4 class="alert-heading"><i class="fa fa-warning"></i>Estimado usuario</h4>
+				    <p>La empresa pone a su disposición portal de consultas, que le permite realizar lo siguiente:
+				    <ul>
+				    	<li>Consultas de sus recibos.</li>
+				    	<li>Consultas de deudas.</li>
+				    	<li>Historial de Consumos.</li>
+				    	<li>Historial de Facturación.</li>
+				    	<li>Consultas de Reclamos.</li>
+				    	<li>Solicitud de Reclamos.</li>
+				    	<li>Solicitud de Fraccionamientos.</li>
+				    </ul>
+				    </p>
+				    <hr>
+				    <p class="mb-0"><b>EPS SEDAM HUANCAYO S.A.</b></p>
+				</div>
+
+				<!-- <a href="#0" class="cd-close-form">Close</a> -->
+			</div> <!-- cd-login -->
+	</section>
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="assets/js/main.js"></script> <!-- Gem jQuery -->
+  <script>
+    var onReCaptcha = function () {
+      if (grecaptcha.getResponse().length !== 0) {
+        var btSubmit = document.getElementById("bt-submit");
+        btSubmit.disabled = false;
+      }
+    };
+  </script>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</body>
+</html>
