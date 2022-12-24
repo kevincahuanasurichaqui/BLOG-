@@ -1,0 +1,76 @@
+
+<div class="mt-5">
+<h1>MANTENIMIENTOS DE PRODUCTOS</h1>
+
+</div>
+
+
+<div *ngIf="accion == 'lista'">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Categoria</th>
+                <th>Nombre</th>
+                <th>Stock</th>
+                <th>Fecha vencimiento</th>
+                <th>Costo S/IGV</th>
+                <th>Costo C/IGV</th>
+                <th>
+                    <button class="btn btn-success btn-sm">
+                    <i class="fas fa-plus"></i> Crear
+                    </button>
+                </th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let d of productos">
+                <td>   {{d.id}}  </td>
+                <td>   {{d.categoria}}  </td>
+                <td>   {{d.nombre}}  </td>
+                <td>   {{d.stock}}  </td>
+                <td>   {{d.fechaVencimiento}}  </td>
+                <td>   {{d.costoSinIgv}}  </td>
+                <td>   {{d.costoConIgv}}  </td>
+                <td>
+                    <button class="btn btn-primary btn-sm">
+                        <i class="fas fa-edit"></i> Editar
+                     </button>
+                     <button (click)="eliminar(d)" class="btn btn-danger btn-sm">
+                        <i class="fas fa-trash"></i> Editar
+                     </button>
+                </td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Gaseosa</td>
+                <td>Inka Cola</td>
+                <td>100</td>
+                <td>01/01/2023</td>
+                <td>2.1</td>
+                <td>2.5</td>
+                <td>
+                    <button class="btn btn-primary btn-sm">
+                        <i class="fas fa-edit"></i> Editar
+                     </button>
+                     <button class="btn btn-danger btn-sm">
+                        <i class="fas fa-trash"></i> Editar
+                     </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div *ngIf="accion == 'registro'">
+
+</div>
+
+
+
+
+
+
+
+
